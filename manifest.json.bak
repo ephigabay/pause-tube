@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "PauseTube",
+  "description": "This extension allows you to pause all youtube videos playing on any tab from any tab",
+  "version": "0.1",
+  "background": {
+    "scripts": ["pausetube.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
