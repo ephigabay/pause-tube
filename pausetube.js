@@ -2,7 +2,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   chrome.tabs.query({}, function(tabs) {
     tabs.forEach(function(tab) {
        chrome.tabs.executeScript(tab.id, {
-         code: 'if(document.querySelector("video")){document.querySelector("video").paused ? document.querySelector("video").play() : document.querySelector("video").pause();}'
+         code: 'var pauseVideoElement = document.querySelector("video"); if(pauseVideoElement !== null){pauseVideoElement.paused ? pauseVideoElement.play() : pauseVideoElement.pause();}'
        });
     });
   });
